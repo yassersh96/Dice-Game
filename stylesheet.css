@@ -1,0 +1,146 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+body{
+    font-family: sans-serif;
+    background-image: linear-gradient(45deg, rgba(175, 31, 98,0.7), rgba(255, 0, 0, 0.404));
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+main {
+    position: relative;
+    width: 80%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: auto auto ;
+    z-index: 1000;
+    background-color: rgba(243, 226, 226, 0.781);
+    border: 2px solid #fff;
+    margin:2.5vw auto;
+    overflow:hidden;
+    border-radius: 10px;
+  }
+.btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    background: linear-gradient(90deg,#755bea,#ff72c0);
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing:2px ;
+    display: flex;
+    align-items: center;
+    
+}
+.btn-new {
+    padding: 2vh 2.5vw;
+    top:7vw;
+}
+.btn-dice {
+    padding: 2vh 2vw;
+    bottom:12vw;
+}
+.btn-hold {
+    padding: 2vh 1.5vw;
+    bottom:6vw;
+}
+.btn:hover {
+    background: linear-gradient(90deg,#0162c8,#55e7fc);
+}
+
+.dice{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    height: 150px;
+    top: 30%;
+}
+.display{
+    display: none;
+}
+.player-0,.player-1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.current{
+
+    width: 200px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.856);
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px 10px #0000003f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.score{
+    font-size: 40px;
+    font-weight: 300;
+
+}
+
+.playerx{
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.scorex{
+    font-size: 60px;
+    font-weight: 300;
+
+}
+.player-active {
+    background-color: rgba(253, 0, 0, 0.61);
+
+  }
+
+  .player-active .playerx{
+      font-size: 3rem;
+      color: rgb(255, 255, 255);
+      text-shadow: 2px 2px rgba(0, 0, 0, 0.801) ;
+      
+  }
+
+  .wineer {
+     text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #ffffff 0%,
+      #ffffff 29%,
+      #0f0b4d 67%,
+      #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+        font-size: 4rem;
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
